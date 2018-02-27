@@ -12,8 +12,11 @@ while inp != 'q':
     fingering = '\n'.join(str(ch).split('\n')[2:-1])
     print(fingering)
     inp = input()
-    if inp.lower() == 'q': break
-    if inp.lower().replace(' ', '') == ch.name.lower().replace(' ', ''):
+    if inp.lower() == 'q' or inp.lower() == 'quit':
+        break
+    elif inp.lower() == 'cheat':
+        print('The chord was', ch.name, '\n')
+    elif inp.lower().replace(' ', '') == ch.name.lower().replace(' ', ''):
         print('\nBoom! You got it!\n')
     else:
         print('\nNope, try your luck with another chord.\n')
