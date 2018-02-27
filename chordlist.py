@@ -1,5 +1,6 @@
 from chord import Chord
 
+
 chords = [
     Chord('A Maj', 'x02220', '213'),
     Chord('A7', 'x02020', '12'),
@@ -12,7 +13,7 @@ chords = [
     Chord('C Maj', 'x32010', '321'),
     Chord('C7', 'x32310', '3241'),
     Chord('C Maj7', 'x32000', '32'),
-    Chord('D', 'xx0232', '132'),
+    Chord('D Maj', 'xx0232', '132'),
     Chord('D7', 'xx0212','213'),
     Chord('D min', 'xx0231','231'),
     Chord('D min7', 'xx0222','123'),
@@ -25,9 +26,3 @@ chords = [
     Chord('G Maj', '320003','213'),
     Chord('G7', '320001', '321')
 ]
-
-
-
-for c in chords:
-    print(repr(c))
-    print(c)
