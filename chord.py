@@ -4,6 +4,8 @@ class Chord:
     nut   = '╒═╤═╤═╤═╤═╕'
     fret  = '├─┼─┼─┼─┼─┤'
     ffret = '└─┴─┴─┴─┴─┘'
+    string = '│'
+    finger = '█'
 
 
     def __init__(self, name, frets, fingers):
@@ -22,7 +24,7 @@ class Chord:
         lines.append(Chord.nut)
         n_frets = max(4, max(self.frets))
         for i in range(1, n_frets+1):    # up to max(fret) in chord
-            lines.append(' '.join('█' if f == i else '|' for f in self.frets))
+            lines.append(' '.join(Chord.finger if f == i else Chord.string for f in self.frets))
             lines.append(Chord.ffret if i == n_frets else Chord.fret)
         lines.append('\n')
         return '\n'.join(lines)
